@@ -1,0 +1,151 @@
+/**
+ * The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar.
+ *
+ */
+
+$lineHeightForNav: 70px;
+$lineHeightForSearch: 50px;
+$itemHeight:250px;
+
+
+header.menu {
+
+    // ...
+    width: 100%;
+    position: relative;
+    z-index: 10;
+
+    div.menu-container {
+        width: 100%;
+        background-color: black;
+        padding: 0 20px;
+        text-align: left;
+        
+        div.menu-holder {
+            position: relative;
+            width: 100%;
+            max-width: $siteWidth;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            line-height: $lineHeightForNav;
+            color: white;
+            text-align: left;
+            display: inline-block;
+        }
+        nav {
+            display: inline-block;
+            margin-left: 60px;
+
+            i { 
+                color: white; 
+                font-size: 30px;
+                line-height: $lineHeightForNav;
+            }
+            i.search {
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+
+            a.nav-item {
+                font-family: Helvetica, Arial, Sans-Serif;
+                font-size: 17px;
+                line-height: $lineHeightForNav;
+                text-transform: uppercase;
+                text-decoration: none;
+                white-space: nowrap;
+                border-bottom: 1px solid transparent;
+                color: #FFF;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    div.search-container {
+        position: absolute;
+        background-color: white;
+        z-index: 20;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 100%;
+        padding: 5px;
+        background-color: white;
+        border-bottom: 1px solid #CCC;
+        display: none;
+        &.showing { display: block; }
+        
+        input[type='text'] {
+            min-width: 100%;
+            font-size: 36px;
+            line-height: $lineHeightForSearch;
+            border: 1px solid #CCC;
+            padding: 0 10px;
+        }
+
+        i.close {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 36px;
+            line-height: $lineHeightForSearch;
+        }
+    }
+
+}
+
+.search-title{
+    padding:0px 15px;
+    margin-top: 15px;
+}
+.search-list{
+    width:100%;
+    height:auto;
+    padding:0px 15px;
+    display: flex;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	flex-direction: row;
+    div{       
+            height:auto;
+            float:left;
+            width: 270px;
+            text-align: center;            
+           background-color: rgb(228, 226, 226);
+           box-shadow: 0px 0px 7px 3px gray;           
+            padding:5px;
+            margin: 25px auto;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover{
+                filter: brightness(1.1);
+            }
+            a{
+                text-decoration: none;
+            }
+            h3{
+                align-items:center;
+                margin-top:5px;
+               
+            }
+            p{
+                margin: 20px 0px;
+               
+                align-items: center;
+            }
+            h4{
+                align-content: center;
+                margin: 20px 0px;
+                font-weight: bold;
+            }
+
+           img{
+                height: $itemHeight;
+                float:left;                
+                margin-right: 10px;
+            }
+        }
+   
+}

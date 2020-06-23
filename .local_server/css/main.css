@@ -1,0 +1,133 @@
+/** This is the main stylesheet for the sass compiler, all imports should stem from this initial page. It contains the universal styles of the site, the imports and various other items. */
+/** The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar. */
+header.menu { width: 100%; position: relative; z-index: 10; }
+
+header.menu div.menu-container { width: 100%; background-color: black; padding: 0 20px; text-align: left; }
+
+header.menu div.menu-container div.menu-holder { position: relative; width: 100%; max-width: 100%; margin: 0 auto; }
+
+header.menu div.menu-container h1 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; line-height: 70px; color: white; text-align: left; display: inline-block; }
+
+header.menu div.menu-container nav { display: inline-block; margin-left: 60px; }
+
+header.menu div.menu-container nav .menu { display: none; position: absolute; right: 54px; top: 0; }
+
+header.menu div.menu-container nav i { color: white; font-size: 30px; line-height: 70px; }
+
+header.menu div.menu-container nav i.search { position: absolute; right: 10px; top: 0; }
+
+header.menu div.menu-container nav a.nav-item { font-family: Helvetica, Arial, Sans-Serif; font-size: 17px; line-height: 70px; text-transform: uppercase; text-decoration: none; white-space: nowrap; border-bottom: 1px solid transparent; color: #FFF; margin-right: 20px; }
+
+@media screen and (max-width: 1023px) { header.menu div.menu-container nav { display: block; }
+  header.menu div.menu-container nav .menu { display: block; float: right; }
+  header.menu div.menu-container nav .menu-ex { display: none; }
+  header.menu div.menu-container nav .menu-ex.showing { display: block; }
+  header.menu div.menu-container nav a.nav-item { width: 100%; display: block; }
+  header.menu div.menu-container nav a.nav-item.showing { display: block; } }
+
+header.menu div.search-container { position: absolute; background-color: white; z-index: 20; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; padding: 5px; background-color: white; border-bottom: 1px solid #CCC; display: none; }
+
+header.menu div.search-container.showing { display: block; }
+
+header.menu div.search-container input[type='text'] { min-width: 100%; font-size: 36px; line-height: 50px; border: 1px solid #CCC; padding: 0 10px; width: 100%; }
+
+header.menu div.search-container i.close { position: absolute; right: 10px; top: 5px; font-size: 36px; line-height: 50px; }
+
+/** This is the central home page */
+section#home { position: absolute; width: 100%; height: 100%; top: 0; left: 0; padding: 100px 20px 0; background-image: url("/img/header.jpg"); background-size: cover; background-repeat: no-repeat; }
+
+section#home div.content { max-width: 100%; margin: 0 auto; color: #FFF; }
+
+section#home div.content .product { background-color: #ccc; display: -webkit-box; display: -ms-flexbox; display: flex; color: #000; border-radius: 15px; text-align: center; padding: 40px; }
+
+section#home div.content .product img { float: left; margin-right: 10px; }
+
+section#home div.content .product h3 { -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 5px; }
+
+section#home div.content .product p { margin: 50px; }
+
+section#home div.content .product h4 { -ms-flex-line-pack: center; align-content: center; margin: 20px 0px; font-weight: bold; }
+
+.search-component { padding: auto 15px; margin-top: 10%; height: auto; background-color: #fff; }
+
+.search-component .search-title { padding: 11px 26px 30px 26px; }
+
+.search-component .search-title hr { border-bottom: 1px solid #ccc; margin-top: 2%; }
+
+@media screen and (max-width: 760px) { .search-component { margin-top: 23%; }
+  .search-component .search-title h2 { font-size: 17px; } }
+
+.search-list { width: 100%; height: auto; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.search-list div { height: auto; float: left; width: 25%; padding: 0 1%; -webkit-transition: all 0.5s; transition: all 0.5s; cursor: pointer; }
+
+.search-list div:hover { -webkit-filter: brightness(1.1); filter: brightness(1.1); }
+
+.search-list div a { text-decoration: none; }
+
+.search-list div h3 { -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 5px; }
+
+.search-list div ul { list-style: none; color: #808090; font-size: 15px; text-transform: uppercase; /* vertical-align: middle; */ margin: 16% auto; text-align: left; }
+
+.search-list div img { height: 210px; float: left; margin-right: 10px; }
+
+@media screen and (max-width: 767px) { .search-list { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: auto; }
+  .search-list div { width: 100%; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; border-bottom: 1px solid #ccc; }
+  .search-list div ul { margin: 5% auto; text-align: center; }
+  .search-list div img { float: none; margin-top: 2%; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) { .search-list { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: auto; }
+  .search-list div { width: 45%; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; border-bottom: 1px solid #ccc; margin-right: 2%; }
+  .search-list div ul { margin: 5% auto; text-align: center; }
+  .search-list div img { float: none; margin-top: 2%; } }
+
+.search-showAll { padding: 2%; margin-top: 4%; background-color: #fff; height: auto; }
+
+.search-showAll h1 { margin: 3% auto; text-align: center; font-size: 52px; text-transform: uppercase; }
+
+.search-showAll .search-show-all-list { width: 100%; height: auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: left; -ms-flex-pack: left; justify-content: left; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-flex: 3; -ms-flex-positive: 3; flex-grow: 3; }
+
+.search-showAll .search-show-all-list div { height: auto; width: 28%; text-align: center; -webkit-transition: all 0.5s; transition: all 0.5s; cursor: pointer; margin: 2%; border-bottom: 2px solid #ccc; }
+
+.search-showAll .search-show-all-list div:hover { -webkit-filter: brightness(1.1); filter: brightness(1.1); }
+
+.search-showAll .search-show-all-list div a { text-decoration: none; }
+
+.search-showAll .search-show-all-list div h3 { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.search-showAll .search-show-all-list div ul { list-style: none; color: #808090; font-size: 15px; text-transform: uppercase; padding-bottom: 1%; height: 10%; }
+
+.search-showAll .search-show-all-list div img { padding: 6%; height: 290px; }
+
+.search-showAll .search-show-all-list div .price { padding: 0%; }
+
+@media screen and (max-width: 767px) { .search-showAll .search-show-all-list { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: auto; }
+  .search-showAll .search-show-all-list div { width: 100%; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; border-bottom: 1px solid #ccc; }
+  .search-showAll .search-show-all-list div ul { margin: 5% auto; text-align: center; }
+  .search-showAll .search-show-all-list div img { float: none; margin-top: 2%; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) { .search-showAll .search-show-all-list { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: auto; }
+  .search-showAll .search-show-all-list div { width: 45%; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; border-bottom: 1px solid #ccc; }
+  .search-showAll .search-show-all-list div ul { margin: 5% auto; text-align: center; }
+  .search-showAll .search-show-all-list div img { float: none; margin-top: 2%; } }
+
+@media screen and (max-width: 760px) { .search-showAll { margin-top: 5%; }
+  .search-showAll h1 { margin: 10% auto; } }
+
+html, html * { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; font-family: 'Lato', sans-serif; }
+
+html, body { width: 100%; height: 100%; }
+
+main { width: 100%; height: 100%; display: block; position: relative; }
+
+main * { -webkit-font-smoothing: antialiased; }
+
+main a { -webkit-transition: opacity .5s; transition: opacity .5s; }
+
+main a:hover { opacity: 0.7; }
+
+main a:visited { color: inherit; }
+
+main div.inner { width: 100%; height: auto; background-color: #960000; }
+
+/*# sourceMappingURL=main.css.map */
